@@ -2,7 +2,7 @@
 # Edit at https://www.toptal.com/developers/gitignore?templates=eclipse
 
 src/main/resources/jdbc.properties
-target/
+target/*
 
 ### Eclipse ###
 .metadata
