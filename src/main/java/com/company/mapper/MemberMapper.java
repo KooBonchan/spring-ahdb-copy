@@ -1,6 +1,6 @@
 package com.company.mapper;
 
-import com.company.dto.MemberDTO;
+import com.company.domain.MemberDTO;
 
 public interface MemberMapper {
 	

@@ -1,16 +1,15 @@
-package com.company.dto;
+package com.company.domain;
 
-public class CardDTO {
+public class InvestigatorDTO {
 	int id;
 	String title;
 	String subtitle;
 	String orgImgPath;
 	String realImgPath;
 	String traits;
-	String icons;
+	String stats;
 	String ability;
 	String plainText;
 	int xp;
-	int cost;
 	int deptId;
 }

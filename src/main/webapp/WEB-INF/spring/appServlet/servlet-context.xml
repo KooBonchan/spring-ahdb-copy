@@ -29,13 +29,9 @@
         </beans:list>
       </beans:property>
     </beans:bean>
-    <!-- Fallback: MVC resolver -->
-    <!-- <beans:bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
-      <beans:property name="prefix" value="/WEB-INF/views/" />
-      <beans:property name="suffix" value=".jsp" />
-      <beans:property name="order" value="3"></beans:property>
-    </beans:bean> -->
+    
 	
 	<context:component-scan base-package="com.company.controller" />
+	<context:component-scan base-package="com.company.service" />
 	
 </beans:beans>
