@@ -3,14 +3,15 @@ package com.company.service;
 import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertTrue;
 import static org.junit.Assert.fail;
+import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.when;
-import static org.mockito.Mockito.any;
 
+import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
-import org.springframework.beans.factory.annotation.Autowired;
+import org.mockito.MockitoAnnotations;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
@@ -22,19 +23,21 @@ import lombok.extern.log4j.Log4j2;
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration("file:src\\main\\webapp\\WEB-INF\\spring\\root-context.xml")
 @Log4j2
-public class MemberServiceTest {
+public class MemberServiceImplTest {
 	@Mock
 	private MemberMapper mapper;
 	@InjectMocks
-	private MemberService memberService;
+	private MemberServiceImpl memberService;
 	
 	private MemberDTO member;
-	{
+	
+	@Before
+	public void setUp() {
+		MockitoAnnotations.initMocks(this);
 		member = new MemberDTO();
 		member.setId("TESTIDMUSTBELENGTH20");
 		member.setPassword("TESTpwd1234!@#$");
 	}
-	
 	
 	@Test
 	public void testExists() {
