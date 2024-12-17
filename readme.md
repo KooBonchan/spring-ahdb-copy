@@ -1,3 +1,5 @@
+# Project stop: for 1 month.
+
 # ArkhamDB Fan Project - minor copy
 
 - scope: Revised Core set only
